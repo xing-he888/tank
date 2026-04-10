@@ -57,4 +57,3 @@ def main():
 
     pygame.quit()
 
-# sasaas
