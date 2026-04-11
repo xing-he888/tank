@@ -24,7 +24,7 @@ def main():
                 mx, my = pygame.mouse.get_pos()
                 balls.append(ball.Ball(px, py, mx, my))
         # 填充背景颜色
-        screen.fill((255, 255, 255))
+        screen.fill((0, 128, 0))
         # 获取按键元组
         keys = pygame.key.get_pressed()
 

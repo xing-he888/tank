@@ -4,7 +4,6 @@ import random
 import math
 from character import player
 
-
 class Enemy:
     def __init__(self, image_file, size, blood):
         self.original_image = pygame.image.load(image_file)
@@ -27,7 +26,7 @@ class Enemy:
         dy = player_y - self.y
         distance = (dx ** 2 + dy ** 2) ** 0.5
 
-        if distance > 0:
+        if 15<=distance < 350:
             self.x += (dx / distance) * self.speed
             self.y += (dy / distance) * self.speed
 
