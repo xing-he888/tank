@@ -51,3 +51,4 @@ class Enemy:
         if self.blood <= 0:
             return True
         return False
+
