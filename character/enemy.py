@@ -1,6 +1,7 @@
 import pygame
 import time
 import random
+import math
 from character import player
 
 
@@ -30,9 +31,7 @@ class Enemy:
             self.x += (dx / distance) * self.speed
             self.y += (dy / distance) * self.speed
 
-            angle = -(dx / distance) * 90
-            if dy < 0:
-                angle = 180 - angle
+            angle = math.degrees(math.atan2(-dy, dx)) - 90
             self.image = pygame.transform.rotate(self.original_image, angle)
 
     def attack(self, player, damage=1):
@@ -53,6 +52,3 @@ class Enemy:
         if self.blood <= 0:
             return True
         return False
-
-
-
