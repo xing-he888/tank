@@ -39,3 +39,4 @@ class Ball:
         dx=my-self.x
         dy=my-self.y
         self.angle=math.degrees(math.atan2(-dy,dx))-90
+#
